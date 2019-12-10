@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,13 +6,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <title>Document</title>
 </head>
 <body>
+<h1 style ="text-align:center;padding:20px"><b><u>Live Weather Forecasting</u></b></h1>
+<br>
+{% load crispy_forms_tags %}
 <form method="post">
     {% csrf_token %}
-    {{form}}
-    <button type="submit" name=""Submit">Submit</button>
+    {{form|crispy}}
+    <button type="submit" name="Submit" class="btn btn-primary">Submit</button>
 </form>
 </body>
 </html>
