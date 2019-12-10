@@ -8,8 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-<h1>"Temperature is :-"{{temperature}}</h1>
-<h1>"Weather is :-"{{weather}}</h1>
-<img src="https://openweathermap.org/img/wn/{{ icon }}@2x.png" alt="Image">
+<form method="post">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" name=""Submit">Submit</button>
+</form>
 </body>
 </html>
